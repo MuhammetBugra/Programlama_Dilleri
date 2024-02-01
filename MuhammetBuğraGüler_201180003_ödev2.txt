@@ -1,0 +1,14 @@
+1-)
+
+tupleFinder xs ys zs ws = [(a,b,c,d) | a <- xs, b <- ys, c <- zs, d <- ws, a+b == c+d]
+
+2-)
+
+myUnzip pairs = (map fst pairs, map snd pairs)
+
+3-)
+
+positiveNumbers :: [Int] -> [Int]
+positiveNumbers xs = filter isPositive xs
+  where
+    isPositive x = x > 0

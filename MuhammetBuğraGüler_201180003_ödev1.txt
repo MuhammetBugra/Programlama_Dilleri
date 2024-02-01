@@ -1,0 +1,18 @@
+1-)
+
+calc 0 = 0
+calc n = n * n + calc(n - 1)
+
+calc :: (Eq p, Num p) => p -> p
+
+2-)
+
+copyList [] = []
+copyList (x:xs) = x : x : copyList xs
+
+3-)
+
+listele x y 
+  | x < y = x : listele (x + 1) y
+  | y < x = x : listele (x - 1) y 
+  | otherwise = [x]
